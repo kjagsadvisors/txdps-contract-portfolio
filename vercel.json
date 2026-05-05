@@ -13,7 +13,7 @@
       ]
     },
     {
-      "source": "/data/(.*\\.(json|csv))",
+      "source": "/data/:path*",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=300, must-revalidate" }
       ]
