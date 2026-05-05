@@ -1,0 +1,411 @@
+{
+  "cohort_patterns": [
+    {
+      "vendor": "GALLS LLC",
+      "normalized_desc": "SOFT BODY ARMOR",
+      "count": 4,
+      "total": 624000,
+      "contracts": [
+        {
+          "description": "C25 Soft Body Armor",
+          "amount": 156000,
+          "begin_date": "6/3/2025",
+          "end_date": "8/31/2026"
+        },
+        {
+          "description": "D25 Soft Body Armor",
+          "amount": 156000,
+          "begin_date": "9/22/2025",
+          "end_date": "8/31/2026"
+        },
+        {
+          "description": "A26 Soft Body Armor",
+          "amount": 156000,
+          "begin_date": "11/14/2025",
+          "end_date": "8/31/2026"
+        },
+        {
+          "description": "B26 Soft Body Armor",
+          "amount": 156000,
+          "begin_date": "12/10/2025",
+          "end_date": "8/31/2026"
+        }
+      ]
+    },
+    {
+      "vendor": "MOTOROLA SOLUTIONS INC",
+      "normalized_desc": "BODY WORN CAMERAS",
+      "count": 4,
+      "total": 723131,
+      "contracts": [
+        {
+          "description": "A26 Body Worn Cameras",
+          "amount": 150921,
+          "begin_date": "2/4/2026",
+          "end_date": "8/31/2026"
+        },
+        {
+          "description": "C25 Body Worn Cameras",
+          "amount": 187189,
+          "begin_date": "9/30/2025",
+          "end_date": "9/30/2028"
+        },
+        {
+          "description": "A25 Body Worn Cameras",
+          "amount": 192510,
+          "begin_date": "5/28/2025",
+          "end_date": "5/27/2026"
+        },
+        {
+          "description": "B25 Body Worn Cameras",
+          "amount": 192510,
+          "begin_date": "5/28/2025",
+          "end_date": "5/27/2026"
+        }
+      ]
+    },
+    {
+      "vendor": "GALLS LLC",
+      "normalized_desc": "CLASS AC UNIFORMS",
+      "count": 3,
+      "total": 613877,
+      "contracts": [
+        {
+          "description": "D25 Class AC Uniforms",
+          "amount": 204626,
+          "begin_date": "9/22/2025",
+          "end_date": "8/31/2026"
+        },
+        {
+          "description": "A26 Class AC Uniforms",
+          "amount": 204626,
+          "begin_date": "11/12/2025",
+          "end_date": "8/31/2026"
+        },
+        {
+          "description": "B26 Class AC Uniforms",
+          "amount": 204626,
+          "begin_date": "12/10/2025",
+          "end_date": "8/31/2026"
+        }
+      ]
+    },
+    {
+      "vendor": "GALLS LLC",
+      "normalized_desc": "TAC VESTS",
+      "count": 3,
+      "total": 847200,
+      "contracts": [
+        {
+          "description": "C25 TAC Vests",
+          "amount": 282400,
+          "begin_date": "6/4/2025",
+          "end_date": "8/31/2026"
+        },
+        {
+          "description": "D25 TAC Vests",
+          "amount": 282400,
+          "begin_date": "10/2/2025",
+          "end_date": "8/31/2026"
+        },
+        {
+          "description": "B26 TAC Vests",
+          "amount": 282400,
+          "begin_date": "12/10/2025",
+          "end_date": "8/31/2026"
+        }
+      ]
+    },
+    {
+      "vendor": "CTC Gunworks, LLC",
+      "normalized_desc": "FTU P320",
+      "count": 2,
+      "total": 323400,
+      "contracts": [
+        {
+          "description": "A26 FTU P320 M17",
+          "amount": 161700,
+          "begin_date": "12/10/2025",
+          "end_date": "8/31/2026"
+        },
+        {
+          "description": "B26 FTU M17 P320",
+          "amount": 161700,
+          "begin_date": "2/26/2026",
+          "end_date": "8/31/2026"
+        }
+      ]
+    },
+    {
+      "vendor": "G T DISTRIBUTORS INC",
+      "normalized_desc": "FLEXRS UNIFORMS",
+      "count": 2,
+      "total": 242624,
+      "contracts": [
+        {
+          "description": "B26 FlexRS Uniforms",
+          "amount": 102419,
+          "begin_date": "12/10/2025",
+          "end_date": "8/31/2026"
+        },
+        {
+          "description": "A26 FlexRS Uniforms",
+          "amount": 140205,
+          "begin_date": "11/14/2025",
+          "end_date": "8/31/2026"
+        }
+      ]
+    },
+    {
+      "vendor": "GALLS LLC",
+      "normalized_desc": "ARMOR SKINS",
+      "count": 2,
+      "total": 267200,
+      "contracts": [
+        {
+          "description": "A26 Armor Skins",
+          "amount": 133600,
+          "begin_date": "11/14/2025",
+          "end_date": "8/31/2026"
+        },
+        {
+          "description": "B26 Armor Skins",
+          "amount": 133600,
+          "begin_date": "12/10/2025",
+          "end_date": "8/31/2026"
+        }
+      ]
+    },
+    {
+      "vendor": "METRO AVIATION INC",
+      "normalized_desc": "HEAVY AVIATION MAINTENANCE",
+      "count": 2,
+      "total": 3696484,
+      "contracts": [
+        {
+          "description": "Heavy Aviation Maintenance",
+          "amount": 1196484,
+          "begin_date": "12/19/2023",
+          "end_date": "12/31/2028"
+        },
+        {
+          "description": "Heavy Aviation Maintenance",
+          "amount": 2500000,
+          "begin_date": "2/5/2024",
+          "end_date": "12/31/2028"
+        }
+      ]
+    },
+    {
+      "vendor": "PRESIDIO NETWORKED SOLUTIONS GROUP LLC",
+      "normalized_desc": "CISCO SMARTNET TOTAL CARE",
+      "count": 2,
+      "total": 9454264,
+      "contracts": [
+        {
+          "description": "Cisco SmartNet Total Care",
+          "amount": 2010845,
+          "begin_date": "7/1/2023",
+          "end_date": "6/30/2028"
+        },
+        {
+          "description": "Cisco SmartNet Total Care",
+          "amount": 7443419,
+          "begin_date": "7/1/2023",
+          "end_date": "6/30/2028"
+        }
+      ]
+    },
+    {
+      "vendor": "PROFORCE LAW ENFORCEMENT",
+      "normalized_desc": "FTU DDM4V7",
+      "count": 2,
+      "total": 552262,
+      "contracts": [
+        {
+          "description": "C25 FTU DDM4V7",
+          "amount": 276131,
+          "begin_date": "9/17/2025",
+          "end_date": "8/31/2026"
+        },
+        {
+          "description": "D25 FTU DDM4V7",
+          "amount": 276131,
+          "begin_date": "10/21/2025",
+          "end_date": "8/31/2026"
+        }
+      ]
+    }
+  ],
+  "multi_vendor_products": [
+    {
+      "description": "HEAVY AVIATION MAINTENANCE",
+      "vendor_count": 3,
+      "total_value": 9196484,
+      "contracts": [
+        {
+          "supplier": "ARROW AVIATION CO LLC",
+          "description": "Heavy Aviation Maintenance",
+          "amount": 1500000,
+          "begin_date": "1/29/2024",
+          "end_date": "1/31/2029"
+        },
+        {
+          "supplier": "METRO AVIATION INC",
+          "description": "Heavy Aviation Maintenance",
+          "amount": 1196484,
+          "begin_date": "12/19/2023",
+          "end_date": "12/31/2028"
+        },
+        {
+          "supplier": "METRO AVIATION INC",
+          "description": "Heavy Aviation Maintenance",
+          "amount": 2500000,
+          "begin_date": "2/5/2024",
+          "end_date": "12/31/2028"
+        },
+        {
+          "supplier": "RSG AVIATION INC",
+          "description": "Heavy Aviation Maintenance",
+          "amount": 4000000,
+          "begin_date": "9/1/2024",
+          "end_date": "8/31/2029"
+        }
+      ]
+    },
+    {
+      "description": "STATEWIDE AIRCRAFT MAINTENANCE",
+      "vendor_count": 3,
+      "total_value": 1500000,
+      "contracts": [
+        {
+          "supplier": "CUTTER AVIATION",
+          "description": "Statewide Aircraft Maintenance",
+          "amount": 500000,
+          "begin_date": "12/8/2025",
+          "end_date": "8/31/2030"
+        },
+        {
+          "supplier": "EL PASO AERO INC",
+          "description": "Statewide Aircraft Maintenance",
+          "amount": 500000,
+          "begin_date": "10/2/2025",
+          "end_date": "8/31/2030"
+        },
+        {
+          "supplier": "RAMS AVIATION COMPANY INC",
+          "description": "Statewide Aircraft Maintenance",
+          "amount": 500000,
+          "begin_date": "10/20/2025",
+          "end_date": "8/31/2030"
+        }
+      ]
+    },
+    {
+      "description": "MAINFRAME MIGRATION STAFF AUG",
+      "vendor_count": 2,
+      "total_value": 1375011,
+      "contracts": [
+        {
+          "supplier": "CONQUEST CONSULTING, LLC",
+          "description": "Mainframe Migration Staff Aug",
+          "amount": 693671,
+          "begin_date": "4/26/2023",
+          "end_date": "5/31/2026"
+        },
+        {
+          "supplier": "NEOS CONSULTING GROUP, LLC",
+          "description": "Mainframe Migration Staff Aug",
+          "amount": 681340,
+          "begin_date": "4/26/2023",
+          "end_date": "8/31/2026"
+        }
+      ]
+    },
+    {
+      "description": "CANINES BLANKET",
+      "vendor_count": 2,
+      "total_value": 400000,
+      "contracts": [
+        {
+          "supplier": "COVENANT K9 DETECTION SERVICES, LLC",
+          "description": "Canines Blanket",
+          "amount": 200000,
+          "begin_date": "5/2/2025",
+          "end_date": "5/1/2030"
+        },
+        {
+          "supplier": "PACESETTER K9 LLC",
+          "description": "Canines Blanket",
+          "amount": 200000,
+          "begin_date": "5/2/2025",
+          "end_date": "5/1/2030"
+        }
+      ]
+    },
+    {
+      "description": "LUBBOCK LAWN SERVICES",
+      "vendor_count": 2,
+      "total_value": 313872,
+      "contracts": [
+        {
+          "supplier": "FANDO LANDSCAPING AND LAWNCARE LLC",
+          "description": "Lubbock Lawn Services",
+          "amount": 156402,
+          "begin_date": "1/18/2024",
+          "end_date": "8/31/2028"
+        },
+        {
+          "supplier": "WCD ENTERPRISES LLC",
+          "description": "Lubbock Lawn Services",
+          "amount": 157470,
+          "begin_date": "6/13/2022",
+          "end_date": "8/31/2026"
+        }
+      ]
+    },
+    {
+      "description": "DNA ANALYSIS AND GENETIC GENEA",
+      "vendor_count": 2,
+      "total_value": 233334,
+      "contracts": [
+        {
+          "supplier": "PARABON NANOLABS INC",
+          "description": "DNA Analysis and Genetic Genea",
+          "amount": 116667,
+          "begin_date": "10/25/2024",
+          "end_date": "8/31/2027"
+        },
+        {
+          "supplier": "RGEN INC",
+          "description": "DNA Analysis and Genetic Genea",
+          "amount": 116667,
+          "begin_date": "10/25/2024",
+          "end_date": "8/31/2027"
+        }
+      ]
+    }
+  ],
+  "real_estate": {
+    "count": 101,
+    "total": 644600667,
+    "long_term_count": 71,
+    "long_term_total": 593665921,
+    "legacy_count": 41,
+    "legacy_total": 358293734
+  },
+  "expiration_cliff": {
+    "twelve_mo_count": 318,
+    "twelve_mo_total": 534351353,
+    "eighteen_mo_count": 395,
+    "eighteen_mo_total": 995622968,
+    "thirtysix_mo_count": 513,
+    "thirtysix_mo_total": 1942351984
+  },
+  "long_tail": {
+    "under_250k_count": 224,
+    "under_250k_total": 35677017,
+    "under_150k_count": 98,
+    "under_150k_total": 11792671
+  }
+}
