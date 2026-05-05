@@ -157,7 +157,7 @@
       <div class="stat action">
         <div class="label">Patterns for review</div>
         <div class="value" id="stat-patterns">—</div>
-        <div class="sub">cohort splits + cross-vendor product duplicates &mdash; ~5 min review each</div>
+        <div class="sub" id="stat-patterns-sub">cohort splits, cross-vendor duplicates, blanket contracts, counterparty concentration, noteworthy contracts</div>
       </div>
       <div class="stat action">
         <div class="label">Pre-2018 leases active</div>
@@ -242,6 +242,22 @@
     <h3 style="margin: 1.5em 0 0.5em 0; color: var(--navy-900); font-size: 1.15em;">B. Same-product, multiple-vendor patterns</h3>
     <p style="color: var(--muted); margin-bottom: 1em; max-width: 50em;">Contracts with very similar descriptions awarded to different vendors. Could be deliberate (multi-source for redundancy or geographic coverage) or an unintentional duplication. The category owner knows which.</p>
     <div id="multivendor-list"></div>
+
+    <h3 style="margin: 1.8em 0 0.5em 0; color: var(--navy-900); font-size: 1.15em;">C. Open-ended &ldquo;blanket&rdquo; contracts &mdash; 30 contracts, $168M</h3>
+    <p style="color: var(--muted); margin-bottom: 1em; max-width: 50em;">Contracts whose scope is open-ended (described as &ldquo;blanket&rdquo;, &ldquo;as needed&rdquo;, &ldquo;T&amp;M&rdquo;, or similar) authorize draws against a fixed ceiling without per-purchase review. They concentrate decision authority and reduce visibility into actual utilization. Top 10 by ceiling shown.</p>
+    <div id="blanket-list"></div>
+
+    <h3 style="margin: 1.8em 0 0.5em 0; color: var(--navy-900); font-size: 1.15em;">D. Counterparty concentration &mdash; the &ldquo;DPS [City] 2000 LLC&rdquo; lease pattern</h3>
+    <p style="color: var(--muted); margin-bottom: 1em; max-width: 52em;">Sixteen single-purpose LLCs named &ldquo;DPS [City] 2000 LLC&rdquo; hold $407M in TXDPS facility leases. Public Texas SOS records show DPS Carrollton 2000 LLC has registered agent Jody L. Hagemann &mdash; an Austin real estate attorney. The naming pattern and shared registered agent strongly suggest common ownership across all 16 entities through one developer or real-estate fund. <strong>This pattern is NOT inherently shady.</strong> Build-to-suit single-purpose LLCs are completely standard in Texas commercial real estate. The procurement-relevant finding is counterparty concentration: $407M of long-term lease commitment likely concentrated with one beneficial owner. That creates renegotiation risk if the landlord&rsquo;s financial position changes &mdash; and a portfolio-level negotiation lever TXDPS may not be using.</p>
+    <div id="dps2000-card"></div>
+
+    <h3 style="margin: 1.8em 0 0.5em 0; color: var(--navy-900); font-size: 1.15em;">E. Same-vendor, same-day multi-contract patterns</h3>
+    <p style="color: var(--muted); margin-bottom: 1em; max-width: 52em;">Multiple contracts with the same vendor sharing the same begin date can indicate (a) deliberate splitting of one large purchase to stay under bid thresholds, (b) FY-aligned cohort splits for legitimate reasons, or (c) coincidental simultaneous solicitations. Worth a contract-manager check on the highest-value patterns.</p>
+    <div id="sameday-list"></div>
+
+    <h3 style="margin: 1.8em 0 0.5em 0; color: var(--navy-900); font-size: 1.15em;">F. Specific noteworthy contracts</h3>
+    <p style="color: var(--muted); margin-bottom: 1em; max-width: 52em;">Five contracts the system flags individually for size, term length, vendor entity oddities, or data-hygiene reasons. Each is a question, not an accusation.</p>
+    <div id="noteworthy-list"></div>
   </div>
 </section>
 
@@ -11742,7 +11758,827 @@ const DATA = {
       "amount": 100805,
       "category": "Facilities / Janitorial / Grounds"
     }
-  ]
+  ],
+  "deep_findings": {
+    "blanket_contracts": {
+      "count": 30,
+      "total_value": 168214004,
+      "top_20": [
+        {
+          "contract_no": "0000000000000000000005472",
+          "supplier": "TRIBALCO LLC",
+          "description": "Motorola Video Blanket",
+          "amount": 35000000,
+          "begin_date": "3/6/2026",
+          "end_date": "3/10/2031",
+          "term_years": 5.0,
+          "flags": [
+            "BLANKET"
+          ]
+        },
+        {
+          "contract_no": "0000000000000000000003566",
+          "supplier": "AXON ENTERPRISE INC",
+          "description": "Axon Taser Blanket",
+          "amount": 31000000,
+          "begin_date": "9/1/2024",
+          "end_date": "8/31/2029",
+          "term_years": 5.0,
+          "flags": [
+            "BLANKET"
+          ]
+        },
+        {
+          "contract_no": "0000000000000000000001749",
+          "supplier": "GTS TECHNOLOGY SOLUTIONS, INC.",
+          "description": "Desktop & Laptop Blankets",
+          "amount": 25000000,
+          "begin_date": "8/20/2021",
+          "end_date": "8/19/2026",
+          "term_years": 5.0,
+          "flags": [
+            "BLANKET"
+          ]
+        },
+        {
+          "contract_no": "0000000000000000000005407",
+          "supplier": "GTS TECHNOLOGY SOLUTIONS, INC.",
+          "description": "Printer & Router Blanket",
+          "amount": 10000000,
+          "begin_date": "1/20/2026",
+          "end_date": "1/20/2031",
+          "term_years": 5.0,
+          "flags": [
+            "BLANKET"
+          ]
+        },
+        {
+          "contract_no": "0000000000000000000004416",
+          "supplier": "SIGMA SURVEILLANCE",
+          "description": "Statewide Security Blanket",
+          "amount": 9900000,
+          "begin_date": "3/5/2025",
+          "end_date": "3/5/2030",
+          "term_years": 5.0,
+          "flags": [
+            "BLANKET"
+          ]
+        },
+        {
+          "contract_no": "0000000000000000000004860",
+          "supplier": "CARAHSOFT TECHNOLGY CORPORATION",
+          "description": "Salesforce Blanket",
+          "amount": 9500000,
+          "begin_date": "8/22/2025",
+          "end_date": "8/21/2030",
+          "term_years": 5.0,
+          "flags": [
+            "BLANKET"
+          ]
+        },
+        {
+          "contract_no": "0000000000000000000002851",
+          "supplier": "FLORES AND ASSOCIATES LLC",
+          "description": "DLD KA Scanner Blanket SOLIC",
+          "amount": 7500000,
+          "begin_date": "3/8/2023",
+          "end_date": "8/31/2027",
+          "term_years": 4.5,
+          "flags": [
+            "BLANKET"
+          ]
+        },
+        {
+          "contract_no": "0000000000000000000004628",
+          "supplier": "CAPRICE ELECTRONICS INC",
+          "description": "GSA Battery Blanket Contract",
+          "amount": 7000000,
+          "begin_date": "5/20/2025",
+          "end_date": "5/19/2030",
+          "term_years": 5.0,
+          "flags": [
+            "BLANKET"
+          ]
+        },
+        {
+          "contract_no": "0000000000000000000005330",
+          "supplier": "GALLS LLC",
+          "description": "GSA GALLS BLANKET",
+          "amount": 5000000,
+          "begin_date": "2/11/2026",
+          "end_date": "8/31/2030",
+          "term_years": 4.6,
+          "flags": [
+            "BLANKET"
+          ]
+        },
+        {
+          "contract_no": "0000000000000000000005208",
+          "supplier": "UNITED TACTICAL SYSTEMS LLC",
+          "description": "GSA PepperBall Blanket",
+          "amount": 5000000,
+          "begin_date": "10/6/2025",
+          "end_date": "8/31/2030",
+          "term_years": 4.9,
+          "flags": [
+            "BLANKET"
+          ]
+        },
+        {
+          "contract_no": "0000000000000000000004214",
+          "supplier": "INDUSTRIAL STRENGTH INDUSTRIAL LLC",
+          "description": "GSA LE Equip Blanket",
+          "amount": 4500000,
+          "begin_date": "10/11/2024",
+          "end_date": "8/31/2029",
+          "term_years": 4.9,
+          "flags": [
+            "BLANKET"
+          ]
+        },
+        {
+          "contract_no": "0000000000000000000002769",
+          "supplier": "EXASALES LLC",
+          "description": "Drawbridge Blanket",
+          "amount": 3950000,
+          "begin_date": "2/1/2023",
+          "end_date": "8/31/2027",
+          "term_years": 4.6,
+          "flags": [
+            "BLANKET"
+          ]
+        },
+        {
+          "contract_no": "0000000000000000000004366",
+          "supplier": "PRESIDIO NETWORKED SOLUTIONS GROUP LLC",
+          "description": "ECS Cloud Ops Blanket Contract",
+          "amount": 2500000,
+          "begin_date": "2/1/2025",
+          "end_date": "1/31/2030",
+          "term_years": 5.0,
+          "flags": [
+            "BLANKET"
+          ]
+        },
+        {
+          "contract_no": "0000000000000000000002248",
+          "supplier": "SOFTWARE ONE INC",
+          "description": "Azure Blanket",
+          "amount": 2000000,
+          "begin_date": "2/15/2022",
+          "end_date": "5/14/2026",
+          "term_years": 4.2,
+          "flags": [
+            "BLANKET"
+          ]
+        },
+        {
+          "contract_no": "0000000000000000000005605",
+          "supplier": "LIFE TECHNOLOGIES CORPORATION",
+          "description": "Lab Supplies Emergency Blanket",
+          "amount": 1764204,
+          "begin_date": "3/31/2026",
+          "end_date": "8/31/2026",
+          "term_years": 0.4,
+          "flags": [
+            "BLANKET"
+          ]
+        },
+        {
+          "contract_no": "0000000000000000000005227",
+          "supplier": "THE PEAVEY CORPORATION",
+          "description": "Vapor Lock Bags  - Blanket",
+          "amount": 1025000,
+          "begin_date": "10/17/2025",
+          "end_date": "8/31/2030",
+          "term_years": 4.9,
+          "flags": [
+            "BLANKET"
+          ]
+        },
+        {
+          "contract_no": "0000000000000000000002773",
+          "supplier": "ACE FLOORING SOLUTIONS, LLC",
+          "description": "BLANKET FLOORING CONTRACT",
+          "amount": 950000,
+          "begin_date": "1/12/2023",
+          "end_date": "1/11/2028",
+          "term_years": 5.0,
+          "flags": [
+            "BLANKET"
+          ]
+        },
+        {
+          "contract_no": "0000000000000000000005487",
+          "supplier": "FULL SPECTRUM GROUP LLC",
+          "description": "Lab Equip Main Blanket Service",
+          "amount": 900000,
+          "begin_date": "3/15/2026",
+          "end_date": "8/31/2030",
+          "term_years": 4.5,
+          "flags": [
+            "BLANKET"
+          ]
+        },
+        {
+          "contract_no": "0000000000000000000003508",
+          "supplier": "TRAVIS COX PLUMBING COMPANY LLC",
+          "description": "HQ PLUMBING BLANKET CONTRACT",
+          "amount": 900000,
+          "begin_date": "11/6/2023",
+          "end_date": "8/31/2027",
+          "term_years": 3.8,
+          "flags": [
+            "BLANKET"
+          ]
+        },
+        {
+          "contract_no": "0000000000000000000001870",
+          "supplier": "SPECTRUM",
+          "description": "Spectrum Blanket HQ",
+          "amount": 850000,
+          "begin_date": "8/10/2021",
+          "end_date": "8/31/2099",
+          "term_years": 78.1,
+          "flags": [
+            "BLANKET"
+          ]
+        }
+      ]
+    },
+    "counterparty_concentration_dps2000": {
+      "count": 16,
+      "total_value": 407354000,
+      "registered_agent_finding": "Public Texas SOS records show DPS Carrollton 2000 LLC has registered agent Jody L. Hagemann (Texas Bar #08686600), an Austin real-estate attorney. Common practice: developers form a single-purpose LLC per property and use one real-estate attorney as registered agent across all of them. This pattern strongly suggests common ownership/control of all 16 entities through one developer or real-estate fund.",
+      "context": "Build-to-suit lease arrangements with single-purpose LLCs are completely standard in Texas commercial real estate (liability isolation, tax/financing per asset, individual asset-sale flexibility). The pattern is NOT inherently shady. The procurement-relevant finding is counterparty concentration: $400M+ in long-term lease commitments likely concentrated with one developer entity. That creates both risk (renegotiation pressure if landlord financial position changes) and opportunity (portfolio-level lease negotiation leverage TXDPS does not appear to be using).",
+      "entities": [
+        {
+          "supplier": "DPS CARROLLTON 2000 LLC",
+          "description": "Carrollton Lease 20547",
+          "amount": 68418780,
+          "begin_date": "11/2/2016",
+          "end_date": "8/31/2027",
+          "term_years": 10.8
+        },
+        {
+          "supplier": "DPS SOUTH HOUSTON 2000 LLC",
+          "description": "Houston TFC Lease 20540",
+          "amount": 55847695,
+          "begin_date": "11/1/2016",
+          "end_date": "4/30/2028",
+          "term_years": 11.5
+        },
+        {
+          "supplier": "DPS GEORGETOWN 2000 LLC",
+          "description": "Georgetown Bldg Lease 20550",
+          "amount": 36562838,
+          "begin_date": "1/1/2018",
+          "end_date": "12/31/2027",
+          "term_years": 10.0
+        },
+        {
+          "supplier": "DPS ROSENBERG 2000 LLC",
+          "description": "TFC Lease Rosenberg",
+          "amount": 35339270,
+          "begin_date": "8/1/2022",
+          "end_date": "7/31/2033",
+          "term_years": 11.0
+        },
+        {
+          "supplier": "DPS PLANO 2000 LLC",
+          "description": "TFC Lease 303-3-20721 Plano",
+          "amount": 30354182,
+          "begin_date": "5/1/2024",
+          "end_date": "4/30/2034",
+          "term_years": 10.0
+        },
+        {
+          "supplier": "DPS DALLAS 2000 LLC",
+          "description": "Building Lease Dallas 20379",
+          "amount": 27055698,
+          "begin_date": "11/1/2015",
+          "end_date": "10/31/2035",
+          "term_years": 20.0
+        },
+        {
+          "supplier": "DPS ABILENE 2000 LLC",
+          "description": "TFC Lease 20729 Abilene",
+          "amount": 25160371,
+          "begin_date": "10/7/2022",
+          "end_date": "4/30/2033",
+          "term_years": 10.6
+        },
+        {
+          "supplier": "DPS HOUSTON 2000 LLC",
+          "description": "Building Lease Houston 20370",
+          "amount": 23631074,
+          "begin_date": "6/1/2015",
+          "end_date": "2/29/2036",
+          "term_years": 20.7
+        },
+        {
+          "supplier": "DPS GRAND PRAIRIE 2000 LLC",
+          "description": "Grand Prairie Bldg Lease 20581",
+          "amount": 19035495,
+          "begin_date": "6/1/2018",
+          "end_date": "5/31/2028",
+          "term_years": 10.0
+        },
+        {
+          "supplier": "DPS MEGACENTER 2000 LTD",
+          "description": "Bldg lease Pflugerville 20288",
+          "amount": 16304464,
+          "begin_date": "9/1/2012",
+          "end_date": "8/31/2032",
+          "term_years": 20.0
+        },
+        {
+          "supplier": "DPS NEW BRAUNFELS 2000 LLC",
+          "description": "New Braunfels TFC Lease 20535",
+          "amount": 15109634,
+          "begin_date": "11/1/2016",
+          "end_date": "10/31/2027",
+          "term_years": 11.0
+        },
+        {
+          "supplier": "DPS DENTON 2000 LLC",
+          "description": "Denton Lease DL 303-1-20669",
+          "amount": 12955049,
+          "begin_date": "6/1/2021",
+          "end_date": "5/31/2031",
+          "term_years": 10.0
+        },
+        {
+          "supplier": "DPS LEAGUE CITY 2000 LLC",
+          "description": "New-TFC Lse 20766-League City",
+          "amount": 12923149,
+          "begin_date": "10/1/2025",
+          "end_date": "3/31/2036",
+          "term_years": 10.5
+        },
+        {
+          "supplier": "DPS MIDLAND 2000 LLC",
+          "description": "Midland TFC Lease 20549",
+          "amount": 11778299,
+          "begin_date": "10/27/2016",
+          "end_date": "7/31/2027",
+          "term_years": 10.8
+        },
+        {
+          "supplier": "DPS KILLEEN 2000 LLC",
+          "description": "Killeen Building Lease 20511",
+          "amount": 10547904,
+          "begin_date": "12/8/2016",
+          "end_date": "3/31/2027",
+          "term_years": 10.3
+        },
+        {
+          "supplier": "DPS ANGLETON 2000 LLC",
+          "description": "Angleton DL Location",
+          "amount": 6330096,
+          "begin_date": "10/19/2019",
+          "end_date": "11/30/2030",
+          "term_years": 11.1
+        }
+      ]
+    },
+    "same_day_multi_contracts": [
+      {
+        "vendor": "TEXAS FACILITIES COMMISSION",
+        "start_date": "8/26/2021",
+        "count": 3,
+        "total": 34740962,
+        "contracts": [
+          {
+            "description": "TFC 21-075 PM&ConstructionSvs",
+            "amount": 3292638,
+            "end_date": "8/31/2029"
+          },
+          {
+            "description": "TFC 21-067 Multi Renovations",
+            "amount": 14786482,
+            "end_date": "8/31/2027"
+          },
+          {
+            "description": "TFC 21-078 PM&ConstSvcs",
+            "amount": 16661841,
+            "end_date": "8/31/2028"
+          }
+        ]
+      },
+      {
+        "vendor": "BRIGHT FAMILY PROPERTY LLC",
+        "start_date": "4/1/2014",
+        "count": 2,
+        "total": 17510357,
+        "contracts": [
+          {
+            "description": "TFC Lease Corpus Christi 20374",
+            "amount": 8728835,
+            "end_date": "10/31/2034"
+          },
+          {
+            "description": "Lake Worth Bldg TFCLease 20372",
+            "amount": 8781522,
+            "end_date": "6/30/2034"
+          }
+        ]
+      },
+      {
+        "vendor": "TEXAS FACILITIES COMMISSION",
+        "start_date": "7/27/2023",
+        "count": 2,
+        "total": 12754537,
+        "contracts": [
+          {
+            "description": "TFC Contract 22-176-000",
+            "amount": 4054537,
+            "end_date": "12/31/2026"
+          },
+          {
+            "description": "TFC Contract 23-050-000",
+            "amount": 8700000,
+            "end_date": "8/31/2028"
+          }
+        ]
+      },
+      {
+        "vendor": "GTS TECHNOLOGY SOLUTIONS, INC.",
+        "start_date": "9/1/2023",
+        "count": 2,
+        "total": 9792422,
+        "contracts": [
+          {
+            "description": "VMWARE Maintenance",
+            "amount": 786574,
+            "end_date": "8/31/2028"
+          },
+          {
+            "description": "Splunk Enterprise Security",
+            "amount": 9005848,
+            "end_date": "10/15/2026"
+          }
+        ]
+      },
+      {
+        "vendor": "PRESIDIO NETWORKED SOLUTIONS GROUP LLC",
+        "start_date": "7/1/2023",
+        "count": 2,
+        "total": 9454264,
+        "contracts": [
+          {
+            "description": "Cisco SmartNet Total Care",
+            "amount": 2010845,
+            "end_date": "6/30/2028"
+          },
+          {
+            "description": "Cisco SmartNet Total Care",
+            "amount": 7443419,
+            "end_date": "6/30/2028"
+          }
+        ]
+      },
+      {
+        "vendor": "PARKHILL SMITH & COOPER INC",
+        "start_date": "6/26/2024",
+        "count": 3,
+        "total": 7500000,
+        "contracts": [
+          {
+            "description": "SG2-A/E Services-40523R0007034",
+            "amount": 1500000,
+            "end_date": "6/25/2029"
+          },
+          {
+            "description": "SG4-A/E Services-40523R0007034",
+            "amount": 1500000,
+            "end_date": "6/25/2029"
+          },
+          {
+            "description": "SG1-A/E Services-40523R0007034",
+            "amount": 4500000,
+            "end_date": "6/25/2029"
+          }
+        ]
+      },
+      {
+        "vendor": "WORKQUEST",
+        "start_date": "9/1/2024",
+        "count": 6,
+        "total": 6362747,
+        "contracts": [
+          {
+            "description": "Reg3 Hebbronville Janitorial",
+            "amount": 114081,
+            "end_date": "8/31/2029"
+          },
+          {
+            "description": "R6 Austin Lawn",
+            "amount": 114459,
+            "end_date": "8/31/2029"
+          },
+          {
+            "description": "New Braunfels Janitorial",
+            "amount": 118185,
+            "end_date": "8/31/2026"
+          },
+          {
+            "description": "Eagle Pass Janit 24-29",
+            "amount": 183329,
+            "end_date": "8/31/2029"
+          },
+          {
+            "description": "Columbus Janitorial 2024-2029",
+            "amount": 216082,
+            "end_date": "8/31/2029"
+          },
+          {
+            "description": "DLD SOLIT Staff Aug Reg 6",
+            "amount": 5616610,
+            "end_date": "11/30/2026"
+          }
+        ]
+      },
+      {
+        "vendor": "GTS TECHNOLOGY SOLUTIONS, INC.",
+        "start_date": "8/27/2025",
+        "count": 2,
+        "total": 1411162,
+        "contracts": [
+          {
+            "description": "Net IQ DRA Maintenance",
+            "amount": 109968,
+            "end_date": "8/31/2026"
+          },
+          {
+            "description": "FY25 CYB Server Expansion",
+            "amount": 1301195,
+            "end_date": "8/31/2026"
+          }
+        ]
+      },
+      {
+        "vendor": "SPECTRUM",
+        "start_date": "8/10/2021",
+        "count": 2,
+        "total": 1250000,
+        "contracts": [
+          {
+            "description": "Blanket for Spectrum Field",
+            "amount": 400000,
+            "end_date": "8/31/2099"
+          },
+          {
+            "description": "Spectrum Blanket HQ",
+            "amount": 850000,
+            "end_date": "8/31/2099"
+          }
+        ]
+      },
+      {
+        "vendor": "QIAGEN LLC",
+        "start_date": "12/17/2025",
+        "count": 2,
+        "total": 1060218,
+        "contracts": [
+          {
+            "description": "HOUFY26 - 2 - 24plx",
+            "amount": 131696,
+            "end_date": "8/31/2026"
+          },
+          {
+            "description": "CLD_CO_Qiagen_Kits/Buffer",
+            "amount": 928522,
+            "end_date": "8/31/2026"
+          }
+        ]
+      }
+    ],
+    "noteworthy_contracts": [
+      {
+        "flag": "Deprecated-but-still-listed",
+        "contract": "0000000000000000000003289",
+        "supplier": "TRIBALCO LLC",
+        "description": "DO NOT USE THIS CONTRACT",
+        "amount": 6378546,
+        "begin_date": "see record",
+        "review_question": "A contract literally titled \"DO NOT USE THIS CONTRACT\" is in the public \u00a72054.126 disclosure with a $6.4M ceiling. Why is a deprecated contract still in the active disclosure? This is a data-hygiene flag at minimum, and warrants a contract-management-system audit."
+      },
+      {
+        "flag": "Unusually-long-IT-term",
+        "contract": "0000000000000000000003465",
+        "supplier": "KASEWARE INC",
+        "description": "Kaseware Enterprise Contract",
+        "amount": 47660000,
+        "term_years": 10.0,
+        "review_question": "A 10-year, $47.66M software enterprise contract with a relatively new investigation-management software vendor. Most software contracts are 3-5 years to allow for technology refresh and competitive recompetition. A 10-year lock-in at this scale warrants a review of the original sole-source justification (if any) and renewal-option structure."
+      },
+      {
+        "flag": "Largest-IT-blanket",
+        "contract": "0000000000000000000005472",
+        "supplier": "TRIBALCO LLC",
+        "description": "Motorola Video Blanket",
+        "amount": 35000000,
+        "review_question": "A $35M blanket purchase agreement with TRIBALCO LLC (a Motorola reseller) for video equipment. Blanket POs at this scale concentrate decision authority and remove individual-PO oversight. Worth understanding: what governance applies to draws against this blanket, and could direct-procurement from Motorola via a different cooperative vehicle achieve better economics?"
+      },
+      {
+        "flag": "Largest-single-IT-by-ceiling",
+        "contract": "0000000000000000000005121",
+        "supplier": "CARAHSOFT TECHNOLGY CORPORATION",
+        "description": "Remote Issuance (RI)",
+        "amount": 62401200,
+        "term_years": 5.0,
+        "review_question": "A $62.4M, 5-year contract through Carahsoft for \"Remote Issuance\" \u2014 the underlying product/OEM is not visible from the contract title alone. What product does this license? Is the term and ceiling appropriate for the actual deployment plan? (Note: Carahsoft is a master reseller; this is not a finding against Carahsoft, it is a question about the underlying product/scope.)"
+      },
+      {
+        "flag": "Recent-large-software",
+        "contract": "0000000000000000000005462",
+        "supplier": "GCOM SOFTWARE LLC, A VOYATEK COMPANY",
+        "description": "CCH+ Solution",
+        "amount": 47917320,
+        "term_years": 5.0,
+        "review_question": "A $47.9M, 5-year contract signed January 2026 with GCOM Software LLC (a Voyatek Company). The vendor entity name change suggests a recent acquisition. CCH+ is the Computerized Criminal History solution \u2014 a critical TXDPS system. Worth confirming: was this recompeted with the new ownership structure or carried over from prior award? What change-of-control terms apply?"
+      }
+    ],
+    "near_threshold_contracts": [
+      {
+        "threshold": "$100K",
+        "threshold_value": 100000,
+        "count": 0,
+        "total": 0,
+        "contracts": []
+      },
+      {
+        "threshold": "$250K",
+        "threshold_value": 250000,
+        "count": 8,
+        "total": 1929872,
+        "contracts": [
+          {
+            "supplier": "TRAJEN FLIGHT SUPPORT",
+            "description": "DPS Hangar Lease - El Paso",
+            "amount": 248857
+          },
+          {
+            "supplier": "CON10GENCY CONSULTING, LLC",
+            "description": "D25 TIIP KIT",
+            "amount": 245967
+          },
+          {
+            "supplier": "SIGNATURE FLIGHT SUPPORT",
+            "description": "Laredo Hangar Lease Agreement",
+            "amount": 240681
+          },
+          {
+            "supplier": "HOUSTON COUNTY",
+            "description": "ICC Houston County",
+            "amount": 240000
+          },
+          {
+            "supplier": "KUDELSKI SECURITY INC",
+            "description": "Sophos Endpoint Protection",
+            "amount": 239365
+          },
+          {
+            "supplier": "G T DISTRIBUTORS INC",
+            "description": "1.23.26_Ammo 223 Cal",
+            "amount": 238862
+          },
+          {
+            "supplier": "ARRATI INCORPORATED",
+            "description": "25R0025999-StaffAug-PM-2",
+            "amount": 238400
+          },
+          {
+            "supplier": "WORKQUEST",
+            "description": "R6 Austin N Janitorial Service",
+            "amount": 237740
+          }
+        ]
+      },
+      {
+        "threshold": "$500K",
+        "threshold_value": 500000,
+        "count": 8,
+        "total": 3862895,
+        "contracts": [
+          {
+            "supplier": "JOHNSON CONTROLS",
+            "description": "FY23 HQ Statewide BAS JCI",
+            "amount": 495250
+          },
+          {
+            "supplier": "XEROX CORPORATION",
+            "description": "Xerox Ididese",
+            "amount": 488692
+          },
+          {
+            "supplier": "ECTOR COUNTY ISD",
+            "description": "Ector County ICC",
+            "amount": 484042
+          },
+          {
+            "supplier": "WORKQUEST",
+            "description": "STATEWIDE TEMPORARY JANITORIAL",
+            "amount": 481437
+          },
+          {
+            "supplier": "AIRGAS USA LLC",
+            "description": "AY25 NEW Airgas Contract",
+            "amount": 480000
+          },
+          {
+            "supplier": "RAYMONDVILLE INDEPENDENT SCHOOL DISTRICT",
+            "description": "RaymondVille ISD ICC",
+            "amount": 480000
+          },
+          {
+            "supplier": "MIDLAND COUNTY AUDITOR",
+            "description": "Midland County ICC",
+            "amount": 478474
+          },
+          {
+            "supplier": "DRAKE LIGHTING INC",
+            "description": "Tower Lighting Blanket",
+            "amount": 475000
+          }
+        ]
+      },
+      {
+        "threshold": "$1M",
+        "threshold_value": 1000000,
+        "count": 13,
+        "total": 12679319,
+        "contracts": [
+          {
+            "supplier": "AUSTIN MAC HAIK FORD LINCOLN LTD",
+            "description": "Ford OEM Automotive Parts",
+            "amount": 999999
+          },
+          {
+            "supplier": "COLLEGE STATION AUTO PARTS INC",
+            "description": "Houston Chevrolet OEM Parts",
+            "amount": 999999
+          },
+          {
+            "supplier": "NETSYNC NETWORK SOLUTIONS, INC.",
+            "description": "DPS Core",
+            "amount": 999894
+          },
+          {
+            "supplier": "CEDA-TEX SERVICES INC",
+            "description": "Addtl WILCO TTC Construction",
+            "amount": 993111
+          },
+          {
+            "supplier": "PITNEY BOWES INC",
+            "description": "PB HQ Mailroom Equipment",
+            "amount": 986453
+          },
+          {
+            "supplier": "RETAIL MOTORCYCLE VENTURES INC",
+            "description": "BMW Motorcycle x 22",
+            "amount": 985111
+          },
+          {
+            "supplier": "ABSOLUTE FACILITY SOLUTIONS, LLC",
+            "description": "Facilites Connect",
+            "amount": 975000
+          },
+          {
+            "supplier": "PRIMUS ELECTRONICS CORPORATION",
+            "description": "RADIO TOWER SUPPLIES",
+            "amount": 975000
+          },
+          {
+            "supplier": "CARAHSOFT TECHNOLGY CORPORATION",
+            "description": "DocuSign Licenses",
+            "amount": 959356
+          },
+          {
+            "supplier": "NEW TECH SOLUTIONS INC",
+            "description": "FY25 Adobe ETLA",
+            "amount": 953206
+          },
+          {
+            "supplier": "REGION 3 EDUCATION SERVICE CENTER",
+            "description": "R3 Edu Svcs Center - Victoria",
+            "amount": 952190
+          },
+          {
+            "supplier": "ACE FLOORING SOLUTIONS, LLC",
+            "description": "BLANKET FLOORING CONTRACT",
+            "amount": 950000
+          },
+          {
+            "supplier": "JPEC SERVICES LLC",
+            "description": "AUSTIN-FLORENCE GENERATOR SRVC",
+            "amount": 950000
+          }
+        ]
+      }
+    ]
+  }
 };
 
 const fmtUSD = n => '$' + (n || 0).toLocaleString('en-US');
@@ -11760,7 +12596,12 @@ document.getElementById('stat-12mo').textContent = DATA.headline.expiring_12mo_c
 document.getElementById('stat-12mo-sub').textContent = `contracts expiring · ${fmtUSDShort(DATA.headline.expiring_12mo_value)} value`;
 document.getElementById('stat-18mo').textContent = DATA.headline.expiring_18mo_count.toLocaleString();
 document.getElementById('stat-18mo-sub').textContent = `contracts expiring · ${fmtUSDShort(DATA.headline.expiring_18mo_value)} value`;
-const totalPatterns = DATA.headline.cohort_patterns_count + DATA.headline.multi_vendor_patterns_count;
+const cohortN = DATA.headline.cohort_patterns_count;
+const mvN = DATA.headline.multi_vendor_patterns_count;
+const blanketN = (DATA.deep_findings && DATA.deep_findings.blanket_contracts) ? 10 : 0;
+const noteN = (DATA.deep_findings && DATA.deep_findings.noteworthy_contracts) ? DATA.deep_findings.noteworthy_contracts.length : 0;
+const samedayN = (DATA.deep_findings && DATA.deep_findings.same_day_multi_contracts) ? Math.min(6, DATA.deep_findings.same_day_multi_contracts.length) : 0;
+const totalPatterns = cohortN + mvN + blanketN + noteN + samedayN + 1; // +1 for DPS 2000 portfolio finding
 document.getElementById('stat-patterns').textContent = totalPatterns;
 document.getElementById('stat-legacy').textContent = DATA.headline.legacy_lease_count;
 document.getElementById('stat-legacy-sub').textContent = `${fmtUSDShort(DATA.headline.legacy_lease_value)} long-term commitment · footprint validation needed`;
@@ -11846,6 +12687,101 @@ DATA.multi_vendor_products.forEach(mv => {
   `;
   mvList.appendChild(card);
 });
+
+// --- Blanket / vague-scope contracts
+if (DATA.deep_findings && DATA.deep_findings.blanket_contracts) {
+  const blanketList = document.getElementById('blanket-list');
+  DATA.deep_findings.blanket_contracts.top_20.slice(0, 10).forEach(b => {
+    const card = document.createElement('div');
+    card.className = 'pattern-card';
+    card.innerHTML = `
+      <div class="p-head">
+        <div class="p-title">${escapeHtml(b.supplier)} &mdash; ${escapeHtml(b.description)}</div>
+        <div class="p-meta"><strong>${fmtUSD(b.amount)}</strong> ceiling${b.term_years ? ' · ' + b.term_years + 'yr term' : ''}</div>
+      </div>
+      <div class="review-q">Open-ended scope (${b.flags.join(', ')}). What governance applies to draws against this ceiling? Is utilization tracked against the original justification?</div>
+      <div style="font-size: 0.85em; color: var(--muted); margin-top: 0.4em;">${b.begin_date} → ${b.end_date} · Contract ${escapeHtml(b.contract_no.replace(/^0+/, '0…'))}</div>
+    `;
+    blanketList.appendChild(card);
+  });
+}
+
+// --- DPS 2000 LLC counterparty concentration
+if (DATA.deep_findings && DATA.deep_findings.counterparty_concentration_dps2000) {
+  const dps = DATA.deep_findings.counterparty_concentration_dps2000;
+  const card = document.createElement('div');
+  card.className = 'pattern-card';
+  card.style.borderLeftColor = '#5C4033';
+  card.innerHTML = `
+    <div class="p-head">
+      <div class="p-title">${dps.count} entities named "DPS [City] 2000 LLC" / "LTD" hold TXDPS facility leases</div>
+      <div class="p-meta"><strong>${fmtUSD(dps.total_value)}</strong> aggregated commitment</div>
+    </div>
+    <div class="review-q" style="background: var(--green-light); border-left: 3px solid var(--green); padding-left: 0.6em;">
+      <span style="color: var(--green); font-weight: 700;">Public-records finding: </span>${escapeHtml(dps.registered_agent_finding)}
+    </div>
+    <p style="margin-top: 0.7em; font-size: 0.92em; color: var(--navy-700);">${escapeHtml(dps.context)}</p>
+    <details style="margin-top: 0.7em;">
+      <summary>View all ${dps.count} DPS *2000 LLC entities and lease values</summary>
+      <div class="contract-list">
+        ${dps.entities.map(e => `
+          <div class="row">
+            <div class="desc"><strong>${escapeHtml(e.supplier)}:</strong> ${escapeHtml(e.description)}</div>
+            <div class="amt">${fmtUSD(e.amount)}</div>
+            <div class="meta">${e.begin_date} → ${e.end_date}${e.term_years ? ' · ' + e.term_years + 'yr term' : ''}</div>
+          </div>
+        `).join('')}
+      </div>
+    </details>
+  `;
+  document.getElementById('dps2000-card').appendChild(card);
+}
+
+// --- Same-day multi-contract patterns
+if (DATA.deep_findings && DATA.deep_findings.same_day_multi_contracts) {
+  const samedayList = document.getElementById('sameday-list');
+  DATA.deep_findings.same_day_multi_contracts.slice(0, 6).forEach(s => {
+    const card = document.createElement('div');
+    card.className = 'pattern-card';
+    card.innerHTML = `
+      <div class="p-head">
+        <div class="p-title">${escapeHtml(s.vendor)} &mdash; ${s.count} contracts, all starting ${s.start_date}</div>
+        <div class="p-meta"><strong>${fmtUSD(s.total)}</strong> total</div>
+      </div>
+      <div class="review-q">Were these issued under a single solicitation (e.g., A/E services packaged into multiple task orders) or independent purchases that happened to start the same day? If the latter, was there a procurement-threshold structure at play?</div>
+      <details>
+        <summary>View all ${s.count} contracts</summary>
+        <div class="contract-list">
+          ${s.contracts.map(c => `
+            <div class="row">
+              <div class="desc">${escapeHtml(c.description)}</div>
+              <div class="amt">${fmtUSD(c.amount)}</div>
+              <div class="meta">ends ${c.end_date}</div>
+            </div>
+          `).join('')}
+        </div>
+      </details>
+    `;
+    samedayList.appendChild(card);
+  });
+}
+
+// --- Noteworthy contracts
+if (DATA.deep_findings && DATA.deep_findings.noteworthy_contracts) {
+  const nList = document.getElementById('noteworthy-list');
+  DATA.deep_findings.noteworthy_contracts.forEach(n => {
+    const card = document.createElement('div');
+    card.className = 'pattern-card';
+    card.innerHTML = `
+      <div class="p-head">
+        <div class="p-title">${escapeHtml(n.flag)}: ${escapeHtml(n.supplier)} &mdash; ${escapeHtml(n.description)}</div>
+        <div class="p-meta"><strong>${fmtUSD(n.amount)}</strong>${n.term_years ? ' · ' + n.term_years + 'yr term' : ''}</div>
+      </div>
+      <div class="review-q">${escapeHtml(n.review_question)}</div>
+    `;
+    nList.appendChild(card);
+  });
+}
 
 const renewalTbody = document.getElementById('renewal-tbody');
 const renewalSearch = document.getElementById('renewal-search');
