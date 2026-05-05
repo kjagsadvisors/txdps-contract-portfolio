@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TXDPS Contract Portfolio — Flags Briefing — kjags advisors</title>
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  /* Compact briefing: smaller body text, dense tables, no big section breaks */
+  html { font-size: 10pt; }
+  .page { padding: 0.5in 0.75in 0.6in 0.75in; }
+
+  .doc-header {
+    border-bottom: 2px solid var(--brand-brown);
+    padding-bottom: 0.1in; margin-bottom: 0.2in;
+    display: flex; align-items: flex-end; justify-content: space-between;
+  }
+  .doc-header img { max-height: 0.55in; }
+  .doc-header .right { text-align: right; font-size: 8pt; color: var(--muted); line-height: 1.4; }
+  .doc-header .right strong { color: var(--navy-900); }
+
+  .doc-title-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 0.15in;
+  }
+  .doc-title-row h1 {
+    font-size: 18pt; color: var(--brand-brown); font-weight: 700;
+    line-height: 1.1; letter-spacing: -0.01em; margin: 0;
+  }
+  .doc-title-row .doc-meta { font-size: 8.5pt; color: var(--muted); text-align: right; }
+  .doc-subtitle { font-size: 10pt; color: var(--navy-700); margin-bottom: 0.2in; max-width: 7.5in; }
+
+  h2 {
+    font-size: 12pt; color: var(--brand-brown); font-weight: 700;
+    margin: 0.2in 0 0.06in 0; border-bottom: 1px solid var(--rule); padding-bottom: 0.04in;
+    page-break-after: avoid;
+  }
+  h2 .h2-meta {
+    font-size: 9pt; color: var(--muted); font-weight: 500; float: right;
+  }
+  h3 { font-size: 10pt; color: var(--navy-900); font-weight: 600; margin: 0.1in 0 0.04in 0; }
+
+  p { font-size: 9.5pt; line-height: 1.45; margin: 0 0 0.08in 0; }
+  ul, ol { font-size: 9.5pt; line-height: 1.45; margin: 0.04in 0 0.08in 0.18in; padding-left: 0.15in; }
+  li { margin-bottom: 0.03in; }
+
+  table.flag-table {
+    width: 100%; border-collapse: collapse;
+    margin: 0.06in 0 0.1in 0; font-size: 9pt;
+  }
+  table.flag-table th, table.flag-table td {
+    border-bottom: 1px solid var(--rule);
+    padding: 0.04in 0.08in; text-align: left; vertical-align: top;
+  }
+  table.flag-table th {
+    background: var(--paper-soft); color: var(--brand-brown);
+    font-weight: 600; font-size: 8pt;
+    text-transform: uppercase; letter-spacing: 0.04em;
+    border-bottom: 1.5px solid var(--brand-brown);
+  }
+  table.flag-table td.amount {
+    text-align: right; font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-weight: 600; white-space: nowrap; width: 1.1in;
+  }
+  table.flag-table td.years { text-align: right; font-family: ui-monospace, "SF Mono", Menlo, monospace; width: 0.6in; }
+
+  .review-q {
+    background: var(--amber-light);
+    border-left: 2px solid var(--amber-500);
+    padding: 0.06in 0.1in;
+    margin: 0.04in 0 0.1in 0;
+    font-size: 8.5pt; line-height: 1.45; color: var(--navy-900);
+  }
+  .review-q::before {
+    content: "Review question: ";
+    font-weight: 600; color: var(--brand-brown);
+  }
+
+  .speculative {
+    background: #FEF3F2;
+    border-left: 2px solid #C45441;
+    padding: 0.06in 0.1in;
+    margin: 0.04in 0 0.1in 0;
+    font-size: 8.5pt; line-height: 1.45; color: var(--navy-900);
+  }
+  .speculative::before {
+    content: "Speculative — requires deeper data: ";
+    font-weight: 600; color: #C45441;
+  }
+
+  .summary-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 0.1in; margin: 0.1in 0 0.18in 0;
+  }
+  .summary-card {
+    background: var(--paper-soft); border-left: 3px solid var(--brand-brown);
+    padding: 0.08in 0.12in; border-radius: 2px;
+  }
+  .summary-card .label {
+    font-size: 7.5pt; color: var(--brand-brown-soft);
+    text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600;
+    margin-bottom: 0.02in;
+  }
+  .summary-card .value { font-size: 13pt; font-weight: 700; color: var(--brand-brown); line-height: 1; }
+  .summary-card .sub { font-size: 7.5pt; color: var(--muted); margin-top: 0.02in; }
+
+  .footnote {
+    font-size: 8pt; color: var(--muted);
+    border-top: 1px solid var(--rule); padding-top: 0.08in; margin-top: 0.2in;
+  }
+
+  @media print {
+    body { background: white; }
+    .page { box-shadow: none; margin: 0; max-width: none; padding: 0.5in 0.75in 0.6in 0.75in; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="doc-header">
+    <img src="assets/logo.png" alt="kjags advisors">
+    <div class="right">
+      <strong>kjags advisors</strong><br>
+      AI advisory practice &middot; Perry Hall, MD<br>
+      keeranj@kjagsadvisors.com
+    </div>
+  </div>
+
+  <div class="doc-title-row">
+    <h1>TXDPS Contract Portfolio &mdash; Flags Briefing</h1>
+    <div class="doc-meta">
+      Prepared for: TXDPS Procurement Services<br>
+      Companion to RFI ITD202604210249 response<br>
+      Date: May 8, 2026
+    </div>
+  </div>
+  <div class="doc-subtitle">
+    Compact briefing on every pattern the kjags AI Operating System surfaces from public TXDPS contract data, plus speculative categories that require Department-internal data to confirm. Each pattern is a question for stakeholder validation, not an accusation. Entries amber-highlighted are surfaced from public records; entries red-highlighted are speculative and flagged for further investigation.
+  </div>
+
+  <div class="summary-grid">
+    <div class="summary-card">
+      <div class="label">Contracts analyzed</div>
+      <div class="value">761</div>
+      <div class="sub">$2.99B aggregate ceiling</div>
+    </div>
+    <div class="summary-card">
+      <div class="label">Patterns surfaced</div>
+      <div class="value">37</div>
+      <div class="sub">across 8 categories below</div>
+    </div>
+    <div class="summary-card">
+      <div class="label">12-mo renewal queue</div>
+      <div class="value">318</div>
+      <div class="sub">$534M, action window open</div>
+    </div>
+    <div class="summary-card">
+      <div class="label">Concentrated commitments</div>
+      <div class="value">$575M</div>
+      <div class="sub">blanket ($168M) + DPS *2000 LLC ($407M)</div>
+    </div>
+  </div>
+
+  <h2>1. Open-ended &ldquo;blanket&rdquo; / vague-scope contracts <span class="h2-meta">30 contracts &middot; $168M aggregate ceiling</span></h2>
+
+  <p>Contracts whose scope is described as &ldquo;blanket&rdquo;, &ldquo;as needed&rdquo;, &ldquo;T&amp;M&rdquo;, or similar &mdash; authorizing draws against a fixed ceiling without per-purchase competitive review. Concentrate decision authority and reduce visibility into actual utilization.</p>
+
+  <table class="flag-table">
+    <thead>
+      <tr><th>Vendor</th><th>Description</th><th class="amount">Ceiling</th><th>Begin → End</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>TRIBALCO LLC</td><td>Motorola Video Blanket</td><td class="amount">$35,000,000</td><td>3/6/2026 → 8/31/2030</td></tr>
+      <tr><td>AXON ENTERPRISE INC</td><td>Axon Taser Blanket</td><td class="amount">$31,000,000</td><td>9/1/2024 → 8/31/2029</td></tr>
+      <tr><td>GTS TECHNOLOGY SOLUTIONS</td><td>Desktop &amp; Laptop Blankets</td><td class="amount">$25,000,000</td><td>9/1/2025 → 8/31/2029</td></tr>
+      <tr><td>GTS TECHNOLOGY SOLUTIONS</td><td>Printer &amp; Router Blanket</td><td class="amount">$10,000,000</td><td>1/20/2026 → 8/31/2030</td></tr>
+      <tr><td>SIGMA SURVEILLANCE</td><td>Statewide Security Blanket</td><td class="amount">$9,900,000</td><td>9/1/2024 → 8/31/2027</td></tr>
+      <tr><td>CARAHSOFT TECHNOLOGY CORP</td><td>Salesforce Blanket</td><td class="amount">$9,500,000</td><td>8/22/2025 → 8/21/2030</td></tr>
+      <tr><td>FLORES AND ASSOCIATES LLC</td><td>DLD KA Scanner Blanket SOLIC</td><td class="amount">$7,500,000</td><td>9/1/2024 → 8/31/2029</td></tr>
+      <tr><td>CAPRICE ELECTRONICS INC</td><td>GSA Battery Blanket Contract</td><td class="amount">$7,000,000</td><td>9/1/2024 → 8/31/2027</td></tr>
+      <tr><td colspan="4" style="font-size: 8.5pt; color: var(--muted); padding-top: 0.06in;">+22 additional blanket / open-ended contracts. Full list in companion dashboard.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="review-q">For each blanket above, what governance applies to draws against the ceiling? What percentage of ceiling is typically used? Are blanket renewals the right mechanism, or should the largest ones be restructured into specific-task PO awards?</div>
+
+  <h2>2. Counterparty concentration &mdash; the &ldquo;DPS [City] 2000 LLC&rdquo; lease pattern <span class="h2-meta">16 entities &middot; $407M aggregate</span></h2>
+
+  <p>Sixteen single-purpose LLCs named &ldquo;DPS [City] 2000 LLC&rdquo; (or LTD) hold TXDPS facility leases totaling $407M. Public Texas SOS records show DPS Carrollton 2000 LLC has registered agent <strong>Jody L. Hagemann</strong> (Texas Bar #08686600), an Austin real-estate attorney. The naming pattern + likely shared registered agent strongly suggests common ownership across all 16 entities through one developer or real-estate fund.</p>
+
+  <p><strong>This pattern is NOT inherently shady.</strong> Build-to-suit single-purpose LLCs per property is completely standard in Texas commercial real estate (liability isolation, tax/financing flexibility, individual asset-sale capability). The procurement-relevant findings are:</p>
+
+  <ul>
+    <li><strong>Counterparty concentration risk.</strong> $407M of long-term lease commitment likely concentrated with one beneficial owner. If the landlord&rsquo;s financial position changes or properties are sold, TXDPS faces simultaneous renegotiation across multiple facilities.</li>
+    <li><strong>Portfolio-level negotiation leverage TXDPS may not be using.</strong> Sixteen leases with one counterparty is a portfolio. TXDPS may be negotiating each lease individually as it comes up for renewal, missing the opportunity to negotiate as a portfolio.</li>
+    <li><strong>Build-to-suit financing transparency.</strong> Build-to-suit lease structures embed financing costs the agency could otherwise own. Periodic review of lease-vs-buy economics on the largest properties is appropriate.</li>
+  </ul>
+
+  <table class="flag-table">
+    <thead>
+      <tr><th>Entity</th><th>Description</th><th class="amount">Ceiling</th><th class="years">Term</th><th>Begin → End</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>DPS CARROLLTON 2000 LLC</td><td>Carrollton Lease 20547</td><td class="amount">$68,418,780</td><td class="years">10.8</td><td>11/2/2016 → 8/31/2027</td></tr>
+      <tr><td>DPS SOUTH HOUSTON 2000 LLC</td><td>Houston TFC Lease 20540</td><td class="amount">$55,847,695</td><td class="years">11.5</td><td>11/1/2016 → 4/30/2028</td></tr>
+      <tr><td>DPS GEORGETOWN 2000 LLC</td><td>Georgetown Bldg Lease 20550</td><td class="amount">$36,562,838</td><td class="years">10.0</td><td>1/1/2018 → 12/31/2027</td></tr>
+      <tr><td>DPS ROSENBERG 2000 LLC</td><td>TFC Lease Rosenberg</td><td class="amount">$35,339,270</td><td class="years">11.0</td><td>8/1/2022 → 7/31/2033</td></tr>
+      <tr><td>DPS PLANO 2000 LLC</td><td>TFC Lease 303-3-20721 Plano</td><td class="amount">$30,354,182</td><td class="years">10.0</td><td>5/1/2024 → 4/30/2034</td></tr>
+      <tr><td>DPS DALLAS 2000 LLC</td><td>Building Lease Dallas 20379</td><td class="amount">$27,055,698</td><td class="years">20.0</td><td>11/1/2015 → 10/31/2035</td></tr>
+      <tr><td>DPS ABILENE 2000 LLC</td><td>TFC Lease 20729 Abilene</td><td class="amount">$25,160,371</td><td class="years">10.6</td><td>10/7/2022 → 4/30/2033</td></tr>
+      <tr><td>DPS HOUSTON 2000 LLC</td><td>Building Lease Houston 20370</td><td class="amount">$23,631,074</td><td class="years">20.8</td><td>6/1/2015 → 2/29/2036</td></tr>
+      <tr><td>DPS GRAND PRAIRIE 2000 LLC</td><td>Grand Prairie Bldg Lease 20581</td><td class="amount">$19,035,495</td><td class="years">10.0</td><td>6/1/2018 → 5/31/2028</td></tr>
+      <tr><td>DPS MEGACENTER 2000 LTD</td><td>Bldg lease Pflugerville 20288</td><td class="amount">$16,304,464</td><td class="years">20.0</td><td>9/1/2012 → 8/31/2032</td></tr>
+      <tr><td>DPS NEW BRAUNFELS 2000 LLC</td><td>New Braunfels TFC Lease 20535</td><td class="amount">$15,109,634</td><td class="years">11.0</td><td>11/1/2016 → 10/31/2027</td></tr>
+      <tr><td>DPS LEAGUE CITY 2000 LLC</td><td>New-TFC Lse 20766-League City</td><td class="amount">$12,923,149</td><td class="years">11.0</td><td>—</td></tr>
+      <tr><td>DPS DENTON 2000 LLC</td><td>Denton Lease DL 303-1-20669</td><td class="amount">$12,955,049</td><td class="years">10.0</td><td>—</td></tr>
+      <tr><td>DPS MIDLAND 2000 LLC</td><td>Midland TFC Lease 20549</td><td class="amount">$11,778,299</td><td class="years">11.0</td><td>—</td></tr>
+      <tr><td>DPS KILLEEN 2000 LLC</td><td>Killeen Building Lease 20511</td><td class="amount">$10,547,904</td><td class="years">11.0</td><td>—</td></tr>
+      <tr><td>DPS ANGLETON 2000 LLC</td><td>Angleton DL Location</td><td class="amount">$6,330,096</td><td class="years">5.5</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <div class="review-q">Confirm common beneficial ownership of all 16 entities. If concentrated with one developer, assess (a) financial-strength of that counterparty, (b) opportunity for portfolio-level renegotiation, (c) lease-vs-purchase economics on the four largest assets ($150M+ aggregated).</div>
+
+  <div class="speculative">If beneficial ownership traces to current or former TXDPS officials, their family members, or significant state political donors, that warrants ethics-disclosure review separately. <em>Public records do not surface this; it requires beneficial-ownership investigation beyond Texas SOS public filings, cross-referenced with State Ethics Commission filings and political donor records.</em></div>
+
+  <h2>3. Same-vendor cohort patterns <span class="h2-meta">10 patterns &middot; multi-fiscal-year</span></h2>
+
+  <p>Multiple contracts with the same vendor whose descriptions follow a recognizable cohort pattern (e.g., A25, B25, C25, A26 — quarterly or class-based deployment cohorts).</p>
+
+  <table class="flag-table">
+    <thead>
+      <tr><th>Vendor</th><th>Pattern</th><th>Cohorts</th><th class="amount">Aggregate</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>GALLS LLC</td><td>SOFT BODY ARMOR</td><td>A25, B25, C25, A26 (4 cohorts)</td><td class="amount">$624,000</td></tr>
+      <tr><td>MOTOROLA SOLUTIONS INC</td><td>BODY WORN CAMERAS</td><td>A25, B25, C25, A26 (4 cohorts)</td><td class="amount">$723,131</td></tr>
+      <tr><td>GALLS LLC</td><td>CLASS AC UNIFORMS</td><td>D25, A26, B26 (3 cohorts)</td><td class="amount">$613,877</td></tr>
+      <tr><td>GALLS LLC</td><td>TAC VESTS</td><td>C25, D25, B26 (3 cohorts)</td><td class="amount">$847,200</td></tr>
+      <tr><td>METRO AVIATION INC</td><td>HEAVY AVIATION MAINTENANCE</td><td>2 contracts (different ceilings)</td><td class="amount">$3,696,484</td></tr>
+      <tr><td>CTC GUNWORKS, LLC</td><td>FTU P320 M17 (firearms)</td><td>A26, B26 (2 cohorts)</td><td class="amount">$323,400</td></tr>
+      <tr><td>G T DISTRIBUTORS INC</td><td>FLEXRS UNIFORMS</td><td>A26, B26 (2 cohorts)</td><td class="amount">$242,624</td></tr>
+      <tr><td>GALLS LLC</td><td>ARMOR SKINS</td><td>A26, B26 (2 cohorts)</td><td class="amount">$267,200</td></tr>
+    </tbody>
+  </table>
+
+  <div class="review-q">For each cohort: is the split deliberate (class-by-class deployment for quality control or training-cohort timing) or an artifact of fiscal-year procurement cycles? If the latter, would consolidating into a single master agreement with cohort releases reduce procurement overhead?</div>
+
+  <h2>4. Same-product, multiple-vendor patterns <span class="h2-meta">6 patterns</span></h2>
+
+  <p>Contracts with very similar descriptions awarded to different vendors. Could be deliberate (multi-source for redundancy or geographic coverage) or an unintentional duplication.</p>
+
+  <table class="flag-table">
+    <thead>
+      <tr><th>Pattern</th><th>Vendors</th><th>Contracts</th><th class="amount">Aggregate</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>HEAVY AVIATION MAINTENANCE</td><td>Metro Aviation, RSG Aviation, Arrow Aviation</td><td>4</td><td class="amount">$9,196,484</td></tr>
+      <tr><td>STATEWIDE AIRCRAFT MAINTENANCE</td><td>El Paso Aero, RAMS Aviation, Cutter Aviation</td><td>3</td><td class="amount">$1,500,000</td></tr>
+      <tr><td>MAINFRAME MIGRATION STAFF AUG</td><td>Neos Consulting, Conquest Consulting</td><td>2</td><td class="amount">$1,375,011</td></tr>
+      <tr><td>CANINES BLANKET</td><td>Pacesetter K9, Covenant K9 Detection</td><td>2</td><td class="amount">$400,000</td></tr>
+      <tr><td>LUBBOCK LAWN SERVICES</td><td>WCD Enterprises, Fando Landscaping</td><td>2</td><td class="amount">$313,872</td></tr>
+      <tr><td>DNA ANALYSIS &amp; GENETIC GENEALOGY</td><td>Parabon NanoLabs, RGen</td><td>2</td><td class="amount">$233,334</td></tr>
+    </tbody>
+  </table>
+
+  <div class="review-q">For each: is the multi-source split deliberate (geographic coverage, redundancy, capability differentiation) or unintentional duplication? Aviation maintenance in particular spans three vendors at $9M+ — likely reflects fleet-region split, but worth confirming.</div>
+
+  <h2>5. Same-vendor, same-day multi-contract patterns <span class="h2-meta">19 patterns &middot; possible split-purchase signals</span></h2>
+
+  <p>Multiple contracts with the same vendor sharing the same begin date can indicate (a) deliberate splitting of a single procurement to stay under bid thresholds, (b) FY-aligned cohort splits for legitimate reasons, or (c) coincidental simultaneous solicitation closure.</p>
+
+  <table class="flag-table">
+    <thead>
+      <tr><th>Vendor</th><th>Same-day count</th><th>Date</th><th class="amount">Same-day total</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>TEXAS FACILITIES COMMISSION</td><td>3 (PM&amp;Construction services)</td><td>8/26/2021</td><td class="amount">$34,740,962</td></tr>
+      <tr><td>BRIGHT FAMILY PROPERTY LLC</td><td>2 (Corpus Christi + Lake Worth leases)</td><td>4/1/2014</td><td class="amount">$17,510,357</td></tr>
+      <tr><td>TEXAS FACILITIES COMMISSION</td><td>2 (TFC Contract 22-176 + 23-050)</td><td>7/27/2023</td><td class="amount">$12,754,537</td></tr>
+      <tr><td>GTS TECHNOLOGY SOLUTIONS</td><td>2 (VMware + Splunk)</td><td>9/1/2023</td><td class="amount">$9,792,422</td></tr>
+      <tr><td>PRESIDIO NETWORKED SOLUTIONS</td><td>2 (Cisco SmartNet × 2 different ceilings)</td><td>7/1/2023</td><td class="amount">$9,454,264</td></tr>
+      <tr><td>PARKHILL SMITH &amp; COOPER INC</td><td>3 (A/E Services SG1, SG2, SG4)</td><td>6/26/2024</td><td class="amount">$7,500,000</td></tr>
+    </tbody>
+  </table>
+
+  <div class="review-q">PARKHILL SMITH &amp; COOPER A/E Services 3-contract split on same day under same solicitation 40523R0007034 (SG1=$4.5M, SG2=$1.5M, SG4=$1.5M) is the most-investigation-worthy case: why was a single A/E procurement structured as three separate contracts of distinct ceilings, and what determined the 3:1 split between SG1 and SG2/SG4?</div>
+
+  <h2>6. Individually-flagged noteworthy contracts <span class="h2-meta">5 contracts</span></h2>
+
+  <p>Specific contracts the system flags individually for size, term length, vendor entity oddities, or data-hygiene reasons.</p>
+
+  <h3>6.1 Tribalco LLC &mdash; &ldquo;DO NOT USE THIS CONTRACT&rdquo; ($6,378,546)</h3>
+  <p>A contract literally titled &ldquo;DO NOT USE THIS CONTRACT&rdquo; appears in the public §2054.126 disclosure with a $6.4M ceiling. The same vendor has a separate $35M Motorola Video Blanket contract.</p>
+  <div class="review-q">Why is a deprecated contract still in the active disclosure? At minimum a contract-management-system data-hygiene flag. Worth confirming whether any draws have occurred against the &ldquo;DO NOT USE&rdquo; contract.</div>
+
+  <h3>6.2 Kaseware Inc &mdash; Enterprise Contract ($47,660,000 / 10-year term)</h3>
+  <p>A 10-year, $47.66M software enterprise contract. Most software contracts are 3-5 years to allow technology refresh and competitive recompetition. A 10-year lock-in at this scale is unusual.</p>
+  <div class="review-q">Was the original solicitation competitive? What renewal-option / termination-for-convenience structure applies? Was sole-source justified for a 10-year term?</div>
+
+  <h3>6.3 Tribalco LLC &mdash; Motorola Video Blanket ($35,000,000)</h3>
+  <p>A $35M open-ended blanket purchase agreement with TRIBALCO LLC (a Maryland-based Motorola reseller, not Motorola direct).</p>
+  <div class="review-q">Why route a $35M Motorola product spend through a third-party reseller instead of direct from Motorola via DIR cooperative? Is the markup premium worth the small-business or set-aside benefit (if any)?</div>
+
+  <h3>6.4 Carahsoft Technology Corporation &mdash; Remote Issuance (RI) ($62,401,200 / 5-year)</h3>
+  <p>A $62.4M, 5-year contract through Carahsoft for &ldquo;Remote Issuance&rdquo; &mdash; the largest single IT contract by ceiling. The underlying product / OEM is not visible from the contract title alone.</p>
+  <div class="review-q">What product does this license? (Likely identity-issuance / driver license remote-issuance, but confirm.) Is the term and ceiling appropriate to the actual deployment plan?</div>
+
+  <h3>6.5 GCOM Software LLC, A Voyatek Company &mdash; CCH+ Solution ($47,917,320, signed 1/19/2026)</h3>
+  <p>A $47.9M, 5-year contract signed January 2026. The vendor entity name change (&ldquo;A Voyatek Company&rdquo;) suggests a recent acquisition. CCH+ is the Computerized Criminal History solution &mdash; a critical TXDPS system.</p>
+  <div class="review-q">Was this recompeted with the new ownership structure or carried over from prior award? What change-of-control terms applied at the time of acquisition? Has performance been continuous through the ownership transition?</div>
+
+  <h2>7. Speculative categories &mdash; require Department-internal data <span class="h2-meta">7 categories</span></h2>
+
+  <p>The following categories of finding are not surface-able from the public §2054.126 disclosure alone. They require internal Department data (CAPPS payment records, contract documents themselves, vendor performance records) and/or cross-referenced external data (State Ethics Commission filings, donor records, beneficial ownership investigation). We list them here so the Department understands what additional optimization categories the kjags methodology would surface under engagement.</p>
+
+  <div class="speculative"><strong>Underutilization &mdash; high ceiling, low actual spend.</strong> The PDF lists contract maximums, not actual payments. Cross-joining with Texas Comptroller payee payment data would identify the contracts where actual spend is &lt;30% of ceiling. Those are candidates for ceiling reduction at renewal or sunset altogether.</div>
+
+  <div class="speculative"><strong>Padded scope-of-work language.</strong> &ldquo;And other services as required&rdquo; or &ldquo;at the Department&rsquo;s discretion&rdquo; clauses in deliverables sections expand vendor billing authority beyond original procurement intent. Visible only in the actual contract documents (TPIA-requestable from contracts.lbb.texas.gov) &mdash; not visible in the public summary.</div>
+
+  <div class="speculative"><strong>Sole-source justifications that don&rsquo;t hold up.</strong> Each non-competitive contract should have a sole-source justification on file. The justifications are TPIA-requestable. Some may be aged (vendor-uniqueness claims that no longer apply), formulaic (boilerplate that doesn&rsquo;t survive scrutiny), or based on prior-vendor-incumbency rather than substantive uniqueness.</div>
+
+  <div class="speculative"><strong>Conflicts of interest / political-donor proximity.</strong> Vendor beneficial ownership cross-referenced against state ethics filings and political donor records can identify vendors with political proximity to TXDPS officials, the Governor&rsquo;s office, or relevant legislative committee members. Texas Ethics Commission filings are public; the cross-referencing is investigative work.</div>
+
+  <div class="speculative"><strong>Sub-tier passthrough markup.</strong> Where TXDPS contracts with a prime that subcontracts material work, the prime&rsquo;s markup over the sub&rsquo;s direct cost can be excessive. Visible in detailed contract documents and invoices, not in the public summary.</div>
+
+  <div class="speculative"><strong>Performance failures masked by renewal.</strong> Contracts renewed on schedule despite missed deliverables or SLA breaches. Internal contract management records would surface this.</div>
+
+  <div class="speculative"><strong>Recently-formed vendor entities receiving large awards.</strong> Cross-referencing each vendor&rsquo;s Texas SOS formation date against contract size identifies entities formed shortly before contract award &mdash; sometimes legitimate (newly-spun-out specialists), sometimes a red flag (entities formed specifically to capture a known award).</div>
+
+  <h2>8. Renewal queue &mdash; primary action artifact <span class="h2-meta">395 contracts &middot; $996M</span></h2>
+
+  <p>Of the 761 contracts in the portfolio, 395 ($996M) reach renewal within the next 18 months &mdash; including 318 ($534M) within 12 months. Each renewal is a real decision point already in the procurement workflow. The dashboard&rsquo;s renewal queue is the procurement officer&rsquo;s primary working list and the system&rsquo;s most directly-actionable artifact.</p>
+
+  <p>Recommended Department workflow:</p>
+  <ol>
+    <li>Sort renewal queue by days-to-expiry. The top 30 are the next quarter&rsquo;s decisions.</li>
+    <li>For each: route to the contract owner. Owner classifies as one of: renew as-is, restructure, recompete, sunset.</li>
+    <li>For &ldquo;restructure&rdquo; or &ldquo;recompete&rdquo; classifications, the system surfaces relevant patterns from sections 1-7 above to inform the redesign.</li>
+    <li>The system records each decision so it doesn&rsquo;t resurface.</li>
+  </ol>
+
+  <h2>9. What the kjags methodology adds under engagement</h2>
+
+  <p>This briefing demonstrates what the kjags AI Operating System surfaces from public data alone. With Department engagement and internal data access, the same methodology delivers the speculative categories in section 7, joins payment data to surface utilization, ingests actual contract documents to surface scope-of-work issues, and produces a recurring intelligence cadence rather than a one-time analysis.</p>
+
+  <p>The substance of this engagement is procurement consulting, not IT services. We address the procurement-vehicle question separately in our formal RFI response.</p>
+
+  <div class="footnote">
+    <strong>Source.</strong> All findings derive from the TXDPS Contracts Exceeding $100,000 disclosure under Texas Government Code §2054.126, available at https://www.dps.texas.gov/iod/doingbusiness/docs/contractsOver100K.pdf. Companion live dashboard: txdps-contract-portfolio.vercel.app (private &mdash; password furnished separately to the Department). <strong>Methodology.</strong> AI-augmented PDF extraction (PyMuPDF), keyword + pattern classification, AI-assisted entity-resolution and analysis. <strong>Status.</strong> All findings are questions for stakeholder validation, not recommendations or accusations.
+  </div>
+
+</div>
+
+</body>
+</html>
